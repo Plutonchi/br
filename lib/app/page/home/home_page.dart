@@ -1,4 +1,7 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:br/app/page/page.dart';
+import 'package:br/app/widgets/data_name_widgets.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -89,6 +92,58 @@ class _HomePageState extends State<HomePage> {
           ),
           const SizedBox(
             height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Container(
+              width: double.infinity,
+              height: 400,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: ListView.builder(
+                padding: EdgeInsets.zero,
+                itemCount: 20,
+                itemBuilder: (context, index) {
+                  return  const Date_Name_Widget();
+                },
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  side: const BorderSide(
+                    color: Colors.greenAccent,
+                  ),
+                ),
+                onPressed: () {},
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 15,
+                  ),
+                  child: Text(
+                    'Load More...',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color(
+                        0xff1AB8DB,
+                      ),
+                      fontFamily: 'Montserrat',
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

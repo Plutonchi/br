@@ -1,26 +1,26 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
 
-class AddTaks extends StatefulWidget {
-  const AddTaks({Key? key}) : super(key: key);
+class EditStudent extends StatefulWidget {
+  const EditStudent({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _AddTaksState createState() => _AddTaksState();
+  _EditStudentState createState() => _EditStudentState();
 }
 
-class _AddTaksState extends State<AddTaks> {
+class _EditStudentState extends State<EditStudent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          "ADD STUDENT",
-          style: TextStyle(
+        title: Text(
+          "Edit Students".toUpperCase(),
+          style: const TextStyle(
               color: Color(0xff33C500),
               fontSize: 18,
               fontFamily: 'Montserrat',
@@ -142,11 +142,11 @@ class _AddTaksState extends State<AddTaks> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
                   ElevatedButtonWidget(
-                    title: 'Add',
+                    title: 'Done!',
                     color: Color(0xff1AB8DB),
                   ),
                   ElevatedButtonWidget(
-                    title: 'Cancel',
+                    title: 'Delete',
                     color: Color(0xffFF0000),
                   ),
                 ],
@@ -158,4 +158,3 @@ class _AddTaksState extends State<AddTaks> {
     );
   }
 }
-
